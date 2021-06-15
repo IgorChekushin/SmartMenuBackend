@@ -1,6 +1,6 @@
 package com.example.smartmenu.service.impl;
 
-import com.vorobev.onlineshop.jooq.model.tables.pojos.Recipe;
+import com.example.smartmenu.jooq.model.tables.pojos.Recipe;
 import com.example.smartmenu.repository.RecipesRepository;
 import com.example.smartmenu.service.RecipesService;
 import org.springframework.stereotype.Service;

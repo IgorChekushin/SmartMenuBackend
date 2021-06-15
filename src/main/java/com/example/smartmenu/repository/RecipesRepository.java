@@ -1,7 +1,8 @@
 package com.example.smartmenu.repository;
 
-import com.vorobev.onlineshop.jooq.model.tables.pojos.Ingredient;
-import com.vorobev.onlineshop.jooq.model.tables.pojos.Recipe;
+
+import com.example.smartmenu.jooq.model.tables.pojos.Ingredient;
+import com.example.smartmenu.jooq.model.tables.pojos.Recipe;
 
 import java.util.List;
 

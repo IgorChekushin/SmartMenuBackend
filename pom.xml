@@ -224,7 +224,7 @@
                                 </generate>
                                 <target>
                                     <packageName>
-                                        com.vorobev.onlineshop.jooq.model
+                                        com.example.smartmenu.jooq.model
                                     </packageName>
                                     <directory>
                                         target/generated-sources/jooq

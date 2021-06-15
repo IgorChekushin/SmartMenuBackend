@@ -1,9 +1,9 @@
 package com.example.smartmenu.repository.impl;
 
+import com.example.smartmenu.jooq.model.Tables;
+import com.example.smartmenu.jooq.model.tables.pojos.Ingredient;
+import com.example.smartmenu.jooq.model.tables.pojos.Recipe;
 import com.example.smartmenu.repository.RecipesRepository;
-import com.vorobev.onlineshop.jooq.model.Tables;
-import com.vorobev.onlineshop.jooq.model.tables.pojos.Ingredient;
-import com.vorobev.onlineshop.jooq.model.tables.pojos.Recipe;
 import org.jooq.*;
 import org.springframework.stereotype.Repository;
 
