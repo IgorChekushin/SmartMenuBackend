@@ -1,0 +1,49 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Java CI with Maven and deploy to Heroku
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-maven:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Build the docker-compose stack
+      run: |
+        cd dev 
+        docker-compose up -d
+    - name: Check running containers
+      run: docker ps -a
+    - name: Check logs
+      run: docker logs dev_database_1
+    - name: Build with Maven
+      env:
+        JDBC_DATABASE_URL: jdbc:postgresql://localhost:5432/postgres1
+        JDBC_DATABASE_USERNAME: user1
+        JDBC_DATABASE_PASSWORD: password1
+        JDBC_SSL_MODE: disable
+      run: mvn -B package --file pom.xml
+
+  deploy-to-heroku:
+    needs: build-maven
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+        env:
+          HD_JDBC_SSL_MODE: requre
