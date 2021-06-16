@@ -1,5 +1,6 @@
 package com.example.smartmenu.service.impl;
 
+import com.example.smartmenu.jooq.model.tables.pojos.Ingredient;
 import com.example.smartmenu.jooq.model.tables.pojos.Recipe;
 import com.example.smartmenu.repository.RecipesRepository;
 import com.example.smartmenu.service.RecipesService;
@@ -22,5 +23,10 @@ public class RecipesServiceImpl implements RecipesService {
         return recipes.stream().filter(r -> {
             return ingredients.containsAll(recipesRepository.getIngredientsByRecipeId(r.getId()).stream().map(i -> i.getName()).collect(Collectors.toList()));
         }).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Ingredient> getAllIngredients() {
+        return recipesRepository.getAllIngredients();
     }
 }

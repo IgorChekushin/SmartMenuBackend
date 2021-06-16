@@ -1,5 +1,6 @@
 package com.example.smartmenu.controller;
 
+import com.example.smartmenu.jooq.model.tables.pojos.Ingredient;
 import com.example.smartmenu.jooq.model.tables.pojos.Recipe;
 import com.example.smartmenu.service.RecipesService;
 import org.springframework.web.bind.annotation.*;
@@ -18,5 +19,9 @@ public class ProductsController {
     @PostMapping("/getAllRecipes")
     public List<Recipe> getAllRecipes(@RequestBody List<String> ingredients) {
         return recipesService.getAllRecipes(ingredients);
+    }
+    @GetMapping("/getAllIngredients")
+    public List<Ingredient> getAllIngredients(){
+        return recipesService.getAllIngredients();
     }
 }

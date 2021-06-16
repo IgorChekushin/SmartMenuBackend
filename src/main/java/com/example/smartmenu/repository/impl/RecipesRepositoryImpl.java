@@ -25,7 +25,12 @@ public class RecipesRepositoryImpl implements RecipesRepository {
 
     @Override
     public List<Ingredient> getIngredientsByRecipeId(Integer id) {
-        List<Ingredient> result =  context.selectFrom(Tables.INGREDIENT).where(Tables.INGREDIENT.RECIPE__ID.equal(id)).fetchInto(Ingredient.class);
+        List<Ingredient> result = context.selectFrom(Tables.INGREDIENT).where(Tables.INGREDIENT.RECIPE__ID.equal(id)).fetchInto(Ingredient.class);
         return result;
+    }
+
+    @Override
+    public List<Ingredient> getAllIngredients() {
+        return context.select().distinctOn(Tables.INGREDIENT.NAME).from(Tables.INGREDIENT).fetchInto(Ingredient.class);
     }
 }

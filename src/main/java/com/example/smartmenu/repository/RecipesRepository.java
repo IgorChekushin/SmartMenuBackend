@@ -9,4 +9,5 @@ import java.util.List;
 public interface RecipesRepository {
     List<Recipe> getAllRecipes();
     List<Ingredient> getIngredientsByRecipeId(Integer id);
+    List<Ingredient> getAllIngredients();
 }
