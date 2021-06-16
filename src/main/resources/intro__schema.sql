@@ -21,11 +21,15 @@ CREATE TABLE ingredient
 INSERT into recipe(name, description, image__urls) VALUES
 ('Brisket with vegetables in Korean', 'Prepare the food, wash the vegetables, cut the brisket. Heat the vegetable oil in a wide frying pan, grease the entire bottom with it. Fry the brisket until nicely browned, 5-7 minutes, over medium heat. Add the onion feathers and cook for 3 minutes, stirring. Sprinkle with breadcrumbs or starch, fry for another couple of minutes. Add eggplant cubes and garlic slices. Fry for a couple of minutes over medium heat. Zucchini cut into cubes, add, fry for 3-5 minutes. Pour in the soy sauce, honey, sprinkle with paprika, ground black pepper, stir, fry for a couple of minutes, pour in the vinegar, stir and remove from the heat. If desired, add salt to your taste. Traditionally served with boiled unleavened rice and a spicy Korean snack.', '1PTdBAnpWL4MdPCshiez9XiyMmaWZeChA'),
 ('Pork Medallions', 'Wash the pork tenderloin, dry it with a paper towel and remove excess films and tendons. Cut across the fibers into portions, 4-5 cm thick. In the middle of each piece, make an incision to make a \"pocket\" in which to put a cube of cheese. Wrap with a strip of bacon and fasten with a toothpick to preserve the shape of the medallions. Fry in vegetable oil for 2 minutes on both sides. Add salt and pepper to taste.. Put it in a heat-resistant form and send it to the oven at a temperature of 190 ° C for 10 minutes. Let the finished medallions rest for 5 minutes, cut into 2 pieces or serve whole.', '15zDt3WjwdvJIvqbAdeeLR15zvXNi97l_'),
-('Chicken and potatoes', 'Wash the ham and dry it. Peel the onion.Fry the ham on both sides in vegetable oil until golden brown, 5-7 minutes, medium heat.\n Add the onion feathers, fry for 3 minutes, medium heat.Add paprika, pepper, lemon slices, and cook over low heat for 5 minutes.Add salt and simmer for 5 minutes.Add the potato slices, cover with a lid, bring to a boil over low heat, and mix gently.', '125YEF0erpXQe1IMigyWnW7lzaG1pgepq');
+('Chicken and potatoes', 'Wash the ham and dry it. Peel the onion.Fry the ham on both sides in vegetable oil until golden brown, 5-7 minutes, medium heat.\n Add the onion feathers, fry for 3 minutes, medium heat.Add paprika, pepper, lemon slices, and cook over low heat for 5 minutes.Add salt and simmer for 5 minutes.Add the potato slices, cover with a lid, bring to a boil over low heat, and mix gently.', '125YEF0erpXQe1IMigyWnW7lzaG1pgepq'),
+('Navy macaroni','Melt half the butter in a frying pan and fry the chopped onions until transparent. Add the minced meat from the boiled beef. Pour in a little beef broth left over from cooking the meat. Season with salt and pepper. Put the boiled pasta. Add the remaining butter and combine with the minced meat.','1as5N1p__aABG4Sm4Ba5VaGzbOe29oHzS'),
+('Diet vegetable Soup','The breast can be boiled in advance or directly directly when preparing the soup. We will need 400 ml of unsalted broth. Cut off 40 g of carrots. Pour the broth into a saucepan and bring to a boil. Very finely chop the onion and small cubes of carrots. We send it to the boiling broth and cook for 10 minutes. Next, add the zucchini, cut into small cubes. Cook the soup for another 5 minutes. Next, add the pasta and green peas. Salt the soup to taste and put a couple of peas of black pepper. Cook until the pasta is ready. This is another 5 minutes. Pour the oil into the soup and immediately remove from the heat.','1Jpcukf1KK4jWKA_VZ3LeS6pL_zjeUAnt'),
+('Juicy chicken fillet rolls in the oven','Fillet cut into pieces, beat with a hammer, salt and pepper to taste. We prepare the filling, finely chop the mushrooms, finely chop the greens, cheese on a fine grater, garlic through the crush, add sour cream and mayonnaise, everything is well placed.Put 1 tbsp of dressing in the meat and roll it into a tube, put it in a baking sheet with the seam down.Beat the eggs, lubricate the rolls.We send it to the oven for 30 minutes at 200 degrees.','1r0J6xJQNOTAe--dr_yE-UzzT8IMCcVVp'),
+('Yeast pancakes with milk','Preheat 1 liter of milk to a warm state.Raw yeast is poured with a small amount of warm milk.We dissolve the yeast so that there are no lumps.In the milk, we break the eggs. Add salt, diluted yeast.Mix well.Gradually add 700-750 grams of sifted flour. Knead the dough.You can add sugar to the dough as desired.Cover the dough with a lid and leave it for about 1 hour in a warm place to rise.The dough is ready, you can bake pancakes.Heat the pan well.Pour vegetable oil.Fry the pancakes on both sides until a beautiful golden color under a closed lid.Ready-made pancakes are greased with butter and sprinkle with sugar.','10b-B4g434y-iEhKi93MgzuJB8cxk2ISj'),
+('Cottage cheese charlotte', 'Beat the eggs with sugar well until A THICK FOAM.Add the sifted flour with baking powder and vanilla to the mixture. Once again, beat a little until smooth.Enter the cottage cheese and mash it well with a fork and actively mix it into the dough. Do not whisk!Peel the apples, cut them into small cubes and add them to the dough.Mix and place in a well-greased baking dish.Bake in a preheated 180° - 185°C oven for about 20 minutes.', '15Og3UGiIW0rtJ6x2GPQhjqgSwMp5YSzY'
+);
 
-INSERT into ingredient(name, recipe__id) VALUES
-('Chicken', 3),
-('Potato', 3), ('Onion', 3), ('Sweet paprika', 3), ('Black pepper', 3), ('Lemon', 3), ('Salt', 3) ,('Vegetable oil', 3);
+
 
 INSERT into ingredient(name, recipe__id) VALUES
 ('Brisket (pork)', 1), ('Eggplant', 1), ('Zucchini', 1), ('Onion', 1), ('Garlic (large)',1 ), ('Breadcrumbs', 1),
@@ -33,3 +37,23 @@ INSERT into ingredient(name, recipe__id) VALUES
 
 INSERT into ingredient(name, recipe__id) VALUES
 ('Pork', 2), ('Bacon', 2), ('Mozzarella', 2), ('Salt', 2), ('Black pepper', 2);
+
+INSERT into ingredient(name, recipe__id) VALUES
+('Chicken', 3), ('Potato', 3), ('Onion', 3), ('Sweet paprika', 3), ('Black pepper', 3), ('Lemon', 3), ('Salt', 3) ,('Vegetable oil', 3);
+
+INSERT into ingredient(name, recipe__id) VALUES
+('Pasta', 4), ('Beef', 4), ('Onion', 4), ('Butter', 4), ('Broth', 4), ('Black pepper', 4), ('Salt', 4);
+
+INSERT into ingredient(name, recipe__id) VALUES
+('Broth', 5), ('Onion', 5), ('Carrot', 5), ('Zucchini', 5), ('Pasta', 5), ('Green peas', 5), ('Black pepper', 5) ,('Salt', 5), ('Vegetable oil', 5);
+
+INSERT into ingredient(name, recipe__id) VALUES
+('Chicken fillet', 6), ('Champignons', 6), ('Hard cheese', 6), ('Greens', 6), ('Garlic', 6), ('Sour cream', 6), ('Mayonnaise', 6) ,('Chicken egg', 6);
+
+INSERT into ingredient(name, recipe__id) VALUES
+('Milk', 7), ('Chicken egg', 7), ('Salt', 7), ('Yeast', 7), ('Flour', 7);
+
+
+INSERT into ingredient(name, recipe__id) VALUES
+('Apple', 8), ('Cottage cheese', 8), ('Flour', 8), ('Chicken egg', 8), ('Sugar', 8), ('Vanillin', 8), ('Baking powder', 8) ,('Butter', 8);
+
