@@ -9,10 +9,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/recipes")
-public class ProductsController {
+public class RecipesController {
     private RecipesService recipesService;
 
-    public ProductsController(RecipesService recipesService) {
+    public RecipesController(RecipesService recipesService) {
         this.recipesService = recipesService;
     }
 

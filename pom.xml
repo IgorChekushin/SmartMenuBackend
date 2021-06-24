@@ -12,7 +12,7 @@
     <artifactId>smart-menu</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>smart-menu</name>
-    <description>Online shop backend</description>
+    <description>Recipes backend</description>
 
     <properties>
         <java.version>8</java.version>
